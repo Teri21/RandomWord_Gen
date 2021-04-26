@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Word</title>
+  </head>
+  <body>
+    <h1>Random Word</h1>
+    <h2>(attempt# {{request.session.counter}})</h2>
+    <textarea name="Random_word" cols="30" rows="3">
+{{request.session.word}}</textarea
+    ><br />
+    <form action="/Generate">
+      {{request.session.gen}}
+      <button type="Generate">Generate</button>
+    </form>
+    <br />
+    <form action="/reset">
+      <button type="/reset">Reset</button>
+    </form>
+  </body>
+</html>
